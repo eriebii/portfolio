@@ -1,0 +1,275 @@
+body {
+    background-color: black;
+}
+/* 1. Define the fade-in animation */
+@keyframes fade-in {
+  from { opacity: 0; transform: translateY(50px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* 2. Apply the animation and link it to the scroll progress */
+.scroll-reveal {
+  opacity: 0; /* Initial state: hidden */
+  animation: fade-in linear forwards;
+  animation-duration: 1ms; /* Animation is driven by scroll, not time */
+  animation-timeline: view(); /* Link animation to element's visibility in viewport */
+  animation-range: entry 0% cover 50%; /* Start animation when the image's entry point hits the bottom of the viewport, and finish by the time it reaches the middle */
+}
+
+/* Optional: Ensure smooth animation only runs if user does not prefer reduced motion */
+@media (prefers-reduced-motion: no-preference) {
+  .scroll-reveal {
+    animation-duration: 0.5s; /* Add duration for users without motion preference */
+  }
+}
+
+.nameheader {
+  position: relative; /* Needed to position the dropdown content relative to its button */
+  display: inline-block;
+  float: left;
+}
+
+.namebtn {
+  background-color: #000000;
+  color: white;
+  opacity: 0.8;
+  padding: 10px;
+  font-size: 35px;
+  border: none;
+  cursor: pointer;
+}
+
+.namebtn:hover {
+    opacity: 0.7; /* Optional: add a hover effect */
+}
+
+.dropdown {
+  position: relative; /* Needed to position the dropdown content relative to its button */
+  display: inline-block;
+  float: right; /* Aligns the dropdown to the right side of the container */
+}
+/* Dropdown button styling */
+.dropbtn {
+  background-color: #000000;
+  color: white;
+  opacity: 0.8;
+  padding: 20px;
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+}
+
+/* Dropdown Content (Hidden by Default) */
+.dropdown-content {
+  display: none; /* Hide the content initially */
+  position: absolute; /* Position it below the button */
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  right: 0; /* Aligns the right edge of the dropdown content with the right edge of its parent (.dropdown) */
+}
+
+/* Links inside the dropdown */
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block; /* Make links take the full width */
+  text-align: left; /* Align text to the left */
+}
+
+/* Change color of dropdown links on hover */
+.dropdown-content a:hover {
+  background-color: #f1f1f1;
+}
+
+/* Show the dropdown menu on hover over the parent container */
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+/* Change the background color of the dropdown button when the dropdown content is shown */
+.dropdown:hover .dropbtn {
+  background-color: #d4ba36;
+}
+/* Ensure the html and body elements don't have default margins/padding that would cause issues */
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+}
+
+/* The full-screen overlay container */
+#overlay {
+    position: fixed; /* Positions the element relative to the browser window */
+    top: 0;          /* Aligns to the top edge of the viewport */
+    left: 0;         /* Aligns to the left edge of the viewport */
+    width: 100%;     /* Spans the full width of the viewport */
+    height: 100%;    /* Define a height for the overlay */
+    background-color: rgba(0, 0, 0, 0); /* Black background with opacity */
+    color: white;    /* Text color */
+    z-index: 5;   /* Ensures it is above other elements */
+    box-sizing: border-box; /* Ensures padding doesn't add to the 100% width */
+    margin: 0;
+    padding: 0;
+}
+
+/* Add padding to the main content to prevent overlap */
+.content {
+    margin-top: 70px; /* Should be height + padding of the overlay */
+}
+
+/* Content within the overlay */
+.overlay-content {
+  color: white;
+  text-align: center;
+  cursor: default; /* Revert cursor for content inside the overlay */
+}
+
+/* Basic styling for the dropdown within the overlay to ensure it works properly */
+.dropdown {
+  position: relative;
+  display: inline-block;
+  margin: 0;
+  padding: 0;
+}
+
+/* Basic styling for the dropdown within the overlay to ensure it works properly */
+.nameheader {
+  position: relative;
+  display: inline-block;
+  margin: 0;
+  padding: 0;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+}
+
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown-content a:hover {background-color: #f1f1f1}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+/* A class toggled by JavaScript to make the overlay visible */
+#overlay.active {
+  display: flex; 
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; /* Ensures padding/borders are included in element's total width/height */
+}
+h1 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  margin: 0; /* Remove default margins */
+}
+.parent-container {
+    display: flex; /* Enables flexbox layout */
+    justify-content: center; /* Centers child horizontally */
+    align-items: center; /* Centers child vertically */
+    border: 20px #ffffff; /* Optional: visualizes the container */
+}
+
+.centered-box {
+    /* Styles for the text box itself */
+    border: 2px solid rgb(255, 255, 255);
+    padding: 10px;
+    width: 100%; /* Optional: sets a width for the box */
+    text-align: center; /* Centers text horizontally inside the box */
+}
+
+.image-container {
+    /* Set the container position to relative so the absolute positioning of 
+       the text is relative to the container, not the entire page. */
+    position: relative;
+    display: flex; /* Use flexbox to center the image */
+    width: 600px; /* Set a fixed width for the container */
+    margin: auto; /* Center the container horizontally */
+    z-index: 10;;
+}
+
+.image-container img {
+   display: block;
+   width: 600px; /* Ensures the image fills the container */ 
+   object-fit: cover; /* Fit the image while maintaining aspect ratio and cropping excess */
+}
+
+.overlay-text {
+    /* Position the text over the image */
+    position: absolute;
+    background: rgba(170, 169, 169, 0.5); /* Semi-transparent background */
+    color: rgb(0, 0, 0);
+    inset: 0; /* Shorthand for top: 0; right: 0; bottom: 0; left: 0; */
+    text-align: center; /* Center text horizontally */
+    display: flex; /* Use flexbox to center text vertically */
+    justify-content: center; /* Center text horizontally */
+    align-items: center; /* Center text vertically */
+    width: 600px; /* Optional: set a width for the text box */
+    margin: auto;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+
+.image-container:hover .overlay-text {
+    opacity: 1;
+    visibility: visible;
+}
+.social-img-btn img {
+  position: relative;
+  display: inline-block;
+  float: right; /* Aligns the dropdown to the right side of the container */ 
+  width: 58px; /* Adjust size as needed */
+  height: 58px;
+  transition: opacity 0.3s;
+  background-color: #000000;
+  padding: 21px;
+  opacity: 0.8;
+  cursor: pointer;
+  z-index: 1;
+}
+
+.social-img-btn img:hover {
+    opacity: 0.5; /* Optional: add a hover effect */
+}
+.clickableimage-container {
+    /* Set the container position to relative so the absolute positioning of 
+       the text is relative to the container, not the entire page. */
+    position: relative;
+    display: flex; /* Use flexbox to center the image */
+    width: 200px; /* Set a fixed width for the container */
+    margin: auto; /* Center the container horizontally */
+    z-index: 10;
+}
+.clickableImage {
+    /* Smooth transition for the hover effect */
+    z-index: 10;
+    transition: transform 0.3s ease; 
+    /* Remove default image border if any */
+    border: none; 
+}
+
+.clickableImage:hover {
+    /* Zooms the image by 1.1 times on hover */
+    transform: scale(1.1); 
+}
+
+/* Optional: remove the default underline from the anchor tag */
+#imageLink {
+    text-decoration: none;
+    z-index: 10;
+}
