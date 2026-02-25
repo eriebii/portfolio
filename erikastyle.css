@@ -99,21 +99,6 @@ html, body {
   height: 100%;
 }
 
-/* The full-screen overlay container */
-#overlay {
-    position: fixed; /* Positions the element relative to the browser window */
-    top: 0;          /* Aligns to the top edge of the viewport */
-    left: 0;         /* Aligns to the left edge of the viewport */
-    width: 100%;     /* Spans the full width of the viewport */
-    height: 100%;    /* Define a height for the overlay */
-    background-color: rgba(0, 0, 0, 0); /* Black background with opacity */
-    color: white;    /* Text color */
-    z-index: 5;   /* Ensures it is above other elements */
-    box-sizing: border-box; /* Ensures padding doesn't add to the 100% width */
-    margin: 0;
-    padding: 0;
-}
-
 /* Add padding to the main content to prevent overlap */
 .content {
     margin-top: 70px; /* Should be height + padding of the overlay */
@@ -280,4 +265,12 @@ footer {
   width: 100%;
   text-align: center;
   margin-top: 500px; 
+}
+.top-bar {
+    position: fixed; /* Positions the bar relative to the viewport */
+    top: 0;          /* Aligns the bar to the very top of the screen */
+    width: 100%;     /* Ensures the bar spans the full width */
+    color: white;
+    padding: 10px 0; /* Add some spacing */
+    z-index: 1000;   /* Ensures the bar stays on top of other elements */
 }
