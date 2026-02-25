@@ -271,6 +271,5 @@ footer {
     top: 0;          /* Aligns the bar to the very top of the screen */
     width: 100%;     /* Ensures the bar spans the full width */
     color: white;
-    padding: 10px 0; /* Add some spacing */
     z-index: 1000;   /* Ensures the bar stays on top of other elements */
 }
