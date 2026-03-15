@@ -11,6 +11,7 @@
 
 <div class="top-bar">
 </head>
+
 <body>
      <section>
     <div class="social-buttons">
@@ -57,38 +58,27 @@
 <p>
 <main>
    <br><br><br><br>
-<div class="image-container">
-  <img src="dinosaurvaluestudy.png" alt="Description of image" style="width: 600px; margin-right: auto; margin-left: auto; display: block;" class="scroll-reveal">
-  <div class="overlay-text">
-        <p>Digital, February 2026</p>
-    </div>
+
+<div class="img_gallery">
+  <img src="dinosaurvaluestudy.png" alt="Digital <br> January 2026" onclick="openLightbox(this, 0)" />
+  <img src="DirectRex.png" alt="Digital <br> January 2026" onclick="openLightbox(this, 1)"/>
 </div>
-  <div class="image-container">
-  <img src="DirectRex.png" alt="Description of image" style="width: 600px; margin-right: auto; margin-left: auto; display: block;" class="scroll-reveal">
-  <div class="overlay-text">
-        <p>Digital, February 2026</p>
-    </div>
+<div class="lightbox" id="lightbox">
+    <span class="close-btn" onclick="closeLightbox()">&times;</span>
+    <img class="lightbox-content" id="expandedImg">
+    <div id="imgtext" style="margin-right: auto; margin-left: auto; margin-top: auto; margin-bottom: auto; display: block;"></div>
+    <a class="prev" onclick="changeImage(-1)">&#10094;</a>
+    <a class="next" onclick="changeImage(1)">&#10095;</a>
 </div>
 <br><br><br>
+    <script src="Erikajs.js"></script>
 </main>
-
+</body>
 
 <footer>
   <hr>
   Website Design: Elijah Rock</br>
 &copy; 2026 Erika Novitsky. All rights reserved. <br>
 </footer>
-<br>
-<html lang="en-US">
-<head>
-    <meta charset="UTF-8">
-    <title>External JS Example</title>
-</head>
-<body>
-    <!-- Page content loads here first -->
-    <script src="js/script.js" defer></script>
-</body>
-</html>
-
-</body>
+<br> 
 </html>
