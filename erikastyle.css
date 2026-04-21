@@ -371,7 +371,7 @@ box-shadow: 0 32px 75px rgba(1, 1, 1, 0.2);
 
 .gallery-cell {
   width: 80vw;
-  height: 90vh;
+  height: 600px;
   margin-right: 5px;
   margin-left: 5px;
   object-fit: cover;
