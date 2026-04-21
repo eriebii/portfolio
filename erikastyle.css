@@ -346,7 +346,8 @@ box-shadow: 0 32px 75px rgba(1, 1, 1, 0.2);
 
 .flipbook {
     width: 1000px;
-    Height: 600px;
+    Height: 700px;
+    background: black;
 }
 .flipbook .page {
   display: flex;
@@ -358,6 +359,8 @@ box-shadow: 0 32px 75px rgba(1, 1, 1, 0.2);
 }
 .page img{
   width: 100%;
+  height: 100%;
   object-fit: cover;
   margin: auto;
+  bakcground: black;
 }
