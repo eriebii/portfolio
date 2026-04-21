@@ -336,3 +336,28 @@ box-shadow: 0 32px 75px rgba(1, 1, 1, 0.2);
   right: 0;
   border-radius: 3px 0 0 3px;
 }
+.flipbookcon {
+  display: grid;
+  place-content: center;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.flipbook {
+    width: 1000px;
+    Height: 600px;
+}
+.flipbook .page {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  border: 1px solid;
+}
+.page img{
+  width: 100%;
+  object-fit: cover;
+  margin: auto;
+}
