@@ -343,3 +343,23 @@ box-shadow: 0 32px 75px rgba(1, 1, 1, 0.2);
   width: 100vw;
   margin: auto;
 }
+.artlink {
+  opacity: 0.8;
+  border: none;
+  cursor: pointer;
+  width: 100vw;
+  height: 600px;
+  margin-right: 5px;
+  margin-left: 5px;
+  object-fit: cover;
+  background: black;
+  object-position: center top;
+  display: inline-block;
+  overflow: clip;
+    font-size: 35px;
+    color: white;
+}
+
+.artlink:hover {
+    opacity: 0.7; /* Optional: add a hover effect */
+}
