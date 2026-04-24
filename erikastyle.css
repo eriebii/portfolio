@@ -13,7 +13,7 @@ body {
   animation: fade-in linear forwards;
   animation-duration: 1ms; /* Animation is driven by scroll, not time */
   animation-timeline: view(); /* Link animation to element's visibility in viewport */
-  animation-range: entry 0% cover 50%; /* Start animation when the image's entry point hits the bottom of the viewport, and finish by the time it reaches the middle */
+  animation-range: entry 0% cover 30%; /* Start animation when the image's entry point hits the bottom of the viewport, and finish by the time it reaches the middle */
 }
 
 /* Optional: Ensure smooth animation only runs if user does not prefer reduced motion */
@@ -136,7 +136,7 @@ h1 {
     display: flex; /* Use flexbox to center the image */
     width: 600px; /* Set a fixed width for the container */
     margin: auto; /* Center the container horizontally */
-    z-index: 10;;
+    z-index: 10;
 }
 
 .image-container img {
@@ -148,6 +148,7 @@ h1 {
 .overlay-text {
     /* Position the text over the image */
     position: absolute;
+    vertical-align: middle;
     background: rgba(170, 169, 169, 0.5); /* Semi-transparent background */
     color: rgb(0, 0, 0);
     inset: 0; /* Shorthand for top: 0; right: 0; bottom: 0; left: 0; */
@@ -156,15 +157,13 @@ h1 {
     justify-content: center; /* Center text horizontally */
     align-items: center; /* Center text vertically */
     width: 600px; /* Optional: set a width for the text box */
-    margin: auto;
+    margin: inherit;
     opacity: 0;
-    visibility: hidden;
     transition: opacity 0.3s ease, visibility 0.3s ease;
 }
 
 .image-container:hover .overlay-text {
     opacity: 1;
-    visibility: visible;
 }
 .social-img-btn img {
   position: relative;
@@ -216,7 +215,7 @@ footer {
   bottom: 0;
   width: 100%;
   text-align: center;
-  margin-top: 500px; 
+  margin-top: 100px; 
 }
 .top-bar {
     position: fixed; /* Positions the bar relative to the viewport */
@@ -344,22 +343,37 @@ box-shadow: 0 32px 75px rgba(1, 1, 1, 0.2);
   margin: auto;
 }
 .artlink {
-  opacity: 0.8;
-  border: none;
   cursor: pointer;
   width: 100vw;
   height: 600px;
-  margin-right: 5px;
-  margin-left: 5px;
   object-fit: cover;
-  background: black;
-  object-position: center top;
-  display: inline-block;
-  overflow: clip;
-    font-size: 35px;
-    color: white;
+  position: relative;
+  display: inline-block; /* Use flexbox to center the image */
+  z-index: 10;
 }
-
-.artlink:hover {
+.artlink img {
+display: inline-block;
+ object-fit: cover; /* Fit the image while maintaining aspect ratio and cropping excess */
+ height: 600px;
+ object-position: center bottom;
+}
+.artlink:hover .link-overlay{
     opacity: 0.7; /* Optional: add a hover effect */
+}
+.link-overlay {
+    /* Position the text over the image */
+    position: absolute;
+    vertical-align: middle;
+    background: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+    color: rgb(255, 255, 255);
+    inset: 0; /* Shorthand for top: 0; right: 0; bottom: 0; left: 0; */
+    text-align: center; /* Center text horizontally */
+    display: flex; /* Use flexbox to center text vertically */
+    justify-content: center; /* Center text horizontally */
+    align-items: center; /* Center text vertically */
+    width: 100vw; /* Optional: set a width for the text box */
+    margin: auto;
+    opacity: 0;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+    font-size: xx-large;
 }
