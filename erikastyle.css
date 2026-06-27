@@ -1,5 +1,6 @@
 body {
     background-color: black;
+    font-family: serif;
 }
 /* 1. Define the fade-in animation */
 @keyframes fade-in {
@@ -35,6 +36,7 @@ body {
   opacity: 0.8;
   padding: 10px;
   font-size: 35px;
+   font-family: serif;
   border: none;
   cursor: pointer;
 }
@@ -55,6 +57,7 @@ body {
   opacity: 0.8;
   padding: 20px;
   font-size: 16px;
+   font-family: serif;
   border: none;
   cursor: pointer;
 }
@@ -64,7 +67,7 @@ body {
   display: none; /* Hide the content initially */
   position: absolute; /* Position it below the button */
   background-color: #f9f9f9;
-  min-width: 160px;
+  min-width: 170px;
   box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
   right: 0; /* Aligns the right edge of the dropdown content with the right edge of its parent (.dropdown) */
 }
@@ -170,7 +173,7 @@ h1 {
   display: inline-block;
   float: right; /* Aligns the dropdown to the right side of the container */ 
   width: 58px; /* Adjust size as needed */
-  height: 58px;
+  height: 58.5px;
   transition: opacity 0.3s;
   background-color: #000000;
   padding: 21px;
@@ -267,6 +270,7 @@ box-shadow: 0 32px 75px rgba(1, 1, 1, 0.2);
     right: 5%;
     color: #fff;
     font-size: 40px;
+     font-family: serif;
     cursor: pointer;
 }
 /* Navigation buttons */
@@ -280,6 +284,7 @@ box-shadow: 0 32px 75px rgba(1, 1, 1, 0.2);
   color: white;
   font-weight: bold;
   font-size: 20px;
+   font-family: serif;
   transition: 0.6s ease;
   border-radius: 0 3px 3px 0;
   user-select: none;
@@ -341,6 +346,7 @@ box-shadow: 0 32px 75px rgba(1, 1, 1, 0.2);
   grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
   width: 100vw;
   margin: auto;
+  font-size: 25px;
 }
 .artlink {
   cursor: pointer;
@@ -376,4 +382,5 @@ display: inline-block;
     opacity: 0;
     transition: opacity 0.3s ease, visibility 0.3s ease;
     font-size: xx-large;
+     font-family: serif;
 }

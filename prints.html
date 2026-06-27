@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Erika Novitsky</title>
+<style>
+ html, body { height: 100%; margin: 0; background: #000; color: #fff; }
+  body { font-family: sans-serif; text-align: center; }
+  a, a:visited { color: #9bd; }
+</style>
+<link rel="stylesheet" href="erikastyle.css">
+<div class="top-bar">
+</head>
+<body>
+     <section>
+    <div class="social-buttons">
+   <a href="https://x.com/EriEbii" target="_blank" class="social-img-btn">
+   <img src="X_logo_2023_(white).png" alt="X Profile">
+</a>
+    </a>
+<div class="social-buttons">
+   <a href="https://www.instagram.com/eri_ebii3/" target="_blank" class="social-img-btn">
+   <img src="instagram-white-icon.webp" alt="Instagram Profile">
+</a>
+    </a>
+  <div class="nameheader">
+  <button class="namebtn" onclick="window.location.href='index.html'">Erika Novitsky</button>
+  </div>
+    <div class="dropdown">
+  <button class="dropbtn">Store</button>
+  <div class="dropdown-content">
+  </div>
+</div>
+  <div class="dropdown">
+  <button class="dropbtn" onclick="window.location.href='comics.html'">Comics</button>
+  <div class="dropdown-content">
+  </div>
+</div>
+    <div class="dropdown">
+   <button class="dropbtn">Work</button>
+  <div class="dropdown-content">
+  <a href="Illustrations.html">Illustrations</a>
+    <a href="guitars.html">Guitars</a>
+    <a href="prints.html">Prints</a>
+    <a href="digitalsketchbook.html">Digital Sketchbook</a>
+  </div>
+</div>
+ <div class="dropdown">
+  <button class="dropbtn" onclick="window.location.href='erikaabout.html'">About</button>
+  <div class="dropdown-content">
+  </div>
+</div>
+
+</section>
+</header>
+  </div>
+</div>
+<p>
+<main>
+    <br><br><br><br>
+
+<div class="img_gallery">
+    <img src="comic fair poster 2.png" alt="Digital" onclick="openLightbox(this, 0)"/>
+    <img src="comic fair poster 3.png" alt="Digital" onclick="openLightbox(this, 1)"/>
+    <img src="Comics fair poster copy pass2.png" alt="Digital" onclick="openLightbox(this, 2)"/>
+        <img src="insidecovernowords.png" alt="Digital" onclick="openLightbox(this, 3)"/>
+</div>
+<div class="lightbox" id="lightbox">
+    <span class="close-btn" onclick="closeLightbox()">&times;</span>
+    <img class="lightbox-content" id="expandedImg">
+    <div id="imgtext" style="margin-right: auto; margin-left: auto; margin-top: auto; margin-bottom: auto; display: block;"></div>
+    <a class="prev" onclick="changeImage(-1)">&#10094;</a>
+    <a class="next" onclick="changeImage(1)">&#10095;</a>
+</div>
+<br><br><br>
+    <script src="Erikajs.js"></script>
+</main>
+</body>
+
+<footer>
+  <hr>
+  Website Design: Elijah Rock</br>
+&copy; 2026 Erika Novitsky. All rights reserved. <br>
+</footer>
+<br>
+</html>
