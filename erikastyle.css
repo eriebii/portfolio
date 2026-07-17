@@ -348,6 +348,18 @@ box-shadow: 0 32px 75px rgba(1, 1, 1, 0.2);
   margin: auto;
   font-size: 25px;
 }
+.aboutright {
+  text-align: center;
+ justify-content: center;
+ vertical-align: middle;
+ align-items: center;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+  direction: rtl; 
+  width: 100vw;
+  margin: auto;
+  font-size: 25px;
+}
 .artlink {
   cursor: pointer;
   width: 100vw;
